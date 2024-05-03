@@ -1,113 +1,71 @@
-import Image from "next/image";
+import Link from "../../node_modules/next/link";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import About from "./pages/About";
+import Experience from "./pages/Experience";
+import Projects from "./pages/Projects";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div>
+      <header className="h-10">
+        <Navbar></Navbar>
+      </header>
+
+      <section className="px-10 mt-10">
+        <div className="h-screen container max-w-screen-lg mx-auto flex flex-col items-center justify-center text-center">
+          <h2 className="text-2xl font-semibold text-slate-600 bg-[#fafafa] ">
+            Hi, I'm Rugved
+          </h2>
+          <h1 className="text-4xl font-bold text-grey-700 ">
+            Software Developer.
+          </h1>
+          <div className="flex mt-2 gap-2">
+            <Link
+              href="https://www.linkedin.com/in/rugved-kute-bb34b3213/"
+              target="_blank"
+            >
+              <img
+                alt="svgImg"
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCI+CjxwYXRoIGZpbGw9IiMwMDc4ZDQiIGQ9Ik00MiwzN2MwLDIuNzYyLTIuMjM4LDUtNSw1SDExYy0yLjc2MSwwLTUtMi4yMzgtNS01VjExYzAtMi43NjIsMi4yMzktNSw1LTVoMjZjMi43NjIsMCw1LDIuMjM4LDUsNQlWMzd6Ij48L3BhdGg+PHBhdGggZD0iTTMwLDM3VjI2LjkwMWMwLTEuNjg5LTAuODE5LTIuNjk4LTIuMTkyLTIuNjk4Yy0wLjgxNSwwLTEuNDE0LDAuNDU5LTEuNzc5LDEuMzY0CWMtMC4wMTcsMC4wNjQtMC4wNDEsMC4zMjUtMC4wMzEsMS4xMTRMMjYsMzdoLTdWMThoN3YxLjA2MUMyNy4wMjIsMTguMzU2LDI4LjI3NSwxOCwyOS43MzgsMThjNC41NDcsMCw3LjI2MSwzLjA5Myw3LjI2MSw4LjI3NAlMMzcsMzdIMzB6IE0xMSwzN1YxOGgzLjQ1N0MxMi40NTQsMTgsMTEsMTYuNTI4LDExLDE0LjQ5OUMxMSwxMi40NzIsMTIuNDc4LDExLDE0LjUxNCwxMWMyLjAxMiwwLDMuNDQ1LDEuNDMxLDMuNDg2LDMuNDc5CUMxOCwxNi41MjMsMTYuNTIxLDE4LDE0LjQ4NSwxOEgxOHYxOUgxMXoiIG9wYWNpdHk9Ii4wNSI+PC9wYXRoPjxwYXRoIGQ9Ik0zMC41LDM2LjV2LTkuNTk5YzAtMS45NzMtMS4wMzEtMy4xOTgtMi42OTItMy4xOThjLTEuMjk1LDAtMS45MzUsMC45MTItMi4yNDMsMS42NzcJYy0wLjA4MiwwLjE5OS0wLjA3MSwwLjk4OS0wLjA2NywxLjMyNkwyNS41LDM2LjVoLTZ2LTE4aDZ2MS42MzhjMC43OTUtMC44MjMsMi4wNzUtMS42MzgsNC4yMzgtMS42MzgJYzQuMjMzLDAsNi43NjEsMi45MDYsNi43NjEsNy43NzRMMzYuNSwzNi41SDMwLjV6IE0xMS41LDM2LjV2LTE4aDZ2MThIMTEuNXogTTE0LjQ1NywxNy41Yy0xLjcxMywwLTIuOTU3LTEuMjYyLTIuOTU3LTMuMDAxCWMwLTEuNzM4LDEuMjY4LTIuOTk5LDMuMDE0LTIuOTk5YzEuNzI0LDAsMi45NTEsMS4yMjksMi45ODYsMi45ODljMCwxLjc0OS0xLjI2OCwzLjAxMS0zLjAxNSwzLjAxMUgxNC40NTd6IiBvcGFjaXR5PSIuMDciPjwvcGF0aD48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTIsMTloNXYxN2gtNVYxOXogTTE0LjQ4NSwxN2gtMC4wMjhDMTIuOTY1LDE3LDEyLDE1Ljg4OCwxMiwxNC40OTlDMTIsMTMuMDgsMTIuOTk1LDEyLDE0LjUxNCwxMgljMS41MjEsMCwyLjQ1OCwxLjA4LDIuNDg2LDIuNDk5QzE3LDE1Ljg4NywxNi4wMzUsMTcsMTQuNDg1LDE3eiBNMzYsMzZoLTV2LTkuMDk5YzAtMi4xOTgtMS4yMjUtMy42OTgtMy4xOTItMy42OTgJYy0xLjUwMSwwLTIuMzEzLDEuMDEyLTIuNzA3LDEuOTlDMjQuOTU3LDI1LjU0MywyNSwyNi41MTEsMjUsMjd2OWgtNVYxOWg1djIuNjE2QzI1LjcyMSwyMC41LDI2Ljg1LDE5LDI5LjczOCwxOQljMy41NzgsMCw2LjI2MSwyLjI1LDYuMjYxLDcuMjc0TDM2LDM2TDM2LDM2eiI+PC9wYXRoPgo8L3N2Zz4="
+              />
+            </Link>
+
+            <Link href="https://github.com/RugvedKute" target="_blank">
+              <img
+                alt="svgImg"
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCI+CjxsaW5lYXJHcmFkaWVudCBpZD0ickwyd3BwSHl4SFZib2J3bmRzVDZDYV9BWk9aTm5ZNzNoYWpfZ3IxIiB4MT0iNCIgeDI9IjQ0IiB5MT0iMjMuNTA4IiB5Mj0iMjMuNTA4IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjNGM0YzRjIj48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMzQzNDM0Ij48L3N0b3A+PC9saW5lYXJHcmFkaWVudD48cGF0aCBmaWxsPSJ1cmwoI3JMMndwcEh5eEhWYm9id25kc1Q2Q2FfQVpPWk5uWTczaGFqX2dyMSkiIGQ9Ik0yNCw0QzEyLjk1NCw0LDQsMTIuOTU0LDQsMjRjMCw4Ljg4Nyw1LjgwMSwxNi40MTEsMTMuODIsMTkuMDE2aDEyLjM2CUMzOC4xOTksNDAuNDExLDQ0LDMyLjg4Nyw0NCwyNEM0NCwxMi45NTQsMzUuMDQ2LDQsMjQsNHoiPjwvcGF0aD48cGF0aCBkPSJNMzAuMDEsNDEuOTk2TDMwLDM2LjE5OGMwLTAuOTM5LTAuMjItMS44NTYtMC42NDItMi42ODdjNS42NDEtMS4xMzMsOC4zODYtNC40NjgsOC4zODYtMTAuMTc3CWMwLTIuMjU1LTAuNjY1LTQuMjQ2LTEuOTc2LTUuOTJjMC4xLTAuMzE3LDAuMTc0LTAuNjQ1LDAuMjItMC45ODFjMC4xODgtMS4zNjktMC4wMjMtMi4yNjQtMC4xOTMtMi45ODRsLTAuMDI3LTAuMTE2CWMtMC4xODYtMC43OTYtMC40MDktMS4zNjQtMC40MTgtMS4zODhsLTAuMTExLTAuMjgybC0wLjExMS0wLjI4MmwtMC4zMDItMC4wMzJsLTAuMzAzLTAuMDMyYzAsMC0wLjE5OS0wLjAyMS0wLjUwMS0wLjAyMQljLTAuNDE5LDAtMS4wNCwwLjA0Mi0xLjYyNywwLjI0MWwtMC4xOTYsMC4wNjZjLTAuNzQsMC4yNDktMS40MzksMC40ODUtMi40MTcsMS4wNjljLTAuMjg2LDAuMTcxLTAuNTk5LDAuMzY2LTAuOTM0LDAuNTg0CUMyNy4zMzQsMTIuODgxLDI1LjcwNSwxMi42OSwyNCwxMi42OWMtMS43MjIsMC0zLjM2NSwwLjE5Mi00Ljg4OSwwLjU3MWMtMC4zMzktMC4yMi0wLjY1NC0wLjQxNy0wLjk0Mi0wLjU4OQljLTAuOTc4LTAuNTg0LTEuNjc3LTAuODE5LTIuNDE3LTEuMDY5bC0wLjE5Ni0wLjA2NmMtMC41ODUtMC4xOTktMS4yMDctMC4yNDEtMS42MjYtMC4yNDFjLTAuMzAyLDAtMC41MDEsMC4wMjEtMC41MDEsMC4wMjEJbC0wLjMwMiwwLjAzMmwtMC4zLDAuMDMxbC0wLjExMiwwLjI4MWwtMC4xMTMsMC4yODNjLTAuMDEsMC4wMjYtMC4yMzMsMC41OTQtMC40MTksMS4zOTFsLTAuMDI3LDAuMTE1CWMtMC4xNywwLjcxOS0wLjM4MSwxLjYxNS0wLjE5MywyLjk4M2MwLjA0OCwwLjM0NiwwLjEyNSwwLjY4NSwwLjIzLDEuMDExYy0xLjI4NSwxLjY2Ni0xLjkzNiwzLjY0Ni0xLjkzNiw1Ljg5CWMwLDUuNjk1LDIuNzQ4LDkuMDI4LDguMzk3LDEwLjE3Yy0wLjE5NCwwLjM4OC0wLjM0NSwwLjc5OC0wLjQ1MiwxLjIyNGMtMC4xOTcsMC4wNjctMC4zNzgsMC4xMTItMC41MzgsMC4xMzcJYy0wLjIzOCwwLjAzNi0wLjQ4NywwLjA1NC0wLjczOSwwLjA1NGMtMC42ODYsMC0xLjIyNS0wLjEzNC0xLjQzNS0wLjI1OWMtMC4zMTMtMC4xODYtMC44NzItMC43MjctMS40MTQtMS41MTgJYy0wLjQ2My0wLjY3NS0xLjE4NS0xLjU1OC0xLjk5Mi0xLjkyN2MtMC42OTgtMC4zMTktMS40MzctMC41MDItMi4wMjktMC41MDJjLTAuMTM4LDAtMC4yNjUsMC4wMS0wLjM3NiwwLjAyOAljLTAuNTE3LDAuMDgyLTAuOTQ5LDAuMzY2LTEuMTg0LDAuNzhjLTAuMjAzLDAuMzU3LTAuMjM1LDAuNzczLTAuMDg4LDEuMTQxYzAuMjE5LDAuNTQ4LDAuODUxLDAuOTg1LDEuMzQzLDEuMjU1CWMwLjI0MiwwLjEzMywwLjc2NSwwLjYxOSwxLjA3LDEuMTA5YzAuMjI5LDAuMzY4LDAuMzM1LDAuNjMsMC40ODIsMC45OTJjMC4wODcsMC4yMTUsMC4xODMsMC40NDksMC4zMTMsMC43MzIJYzAuNDcsMS4wMjIsMS45MzcsMS45MjQsMi4xMDMsMi4wMjNjMC44MDYsMC40ODMsMi4xNjEsMC42MzgsMy4xNTcsMC42ODNsMC4xMjMsMC4wMDNjMCwwLDAuMDAxLDAsMC4wMDEsMAljMC4yNCwwLDAuNTctMC4wMjMsMS4wMDQtMC4wNzF2Mi42MTNjMC4wMDIsMC41MjktMC41MzcsMC42NDktMS4yNSwwLjYzOGwwLjU0NywwLjE4NEMxOS4zOTUsNDMuNTcyLDIxLjY0NSw0NCwyNCw0NAljMi4zNTUsMCw0LjYwNS0wLjQyOCw2LjcwMy0xLjE3NmwwLjcwMy0wLjI2MkMzMC42OTUsNDIuNTM4LDMwLjAxNiw0Mi40MjIsMzAuMDEsNDEuOTk2eiIgb3BhY2l0eT0iLjA1Ij48L3BhdGg+PHBhdGggZD0iTTMwLjc4MSw0Mi43OTdjLTAuNDA2LDAuMDQ3LTEuMjgxLTAuMTA5LTEuMjgxLTAuNzk1di01LjgwNGMwLTEuMDk0LTAuMzI4LTIuMTUxLTAuOTM2LTMuMDUyCWM1LjkxNS0wLjk1Nyw4LjY3OS00LjA5Myw4LjY3OS05LjgxMmMwLTIuMjM3LTAuNjg2LTQuMTk0LTIuMDM5LTUuODIyYzAuMTM3LTAuMzY1LDAuMjMzLTAuNzUsMC4yODgtMS4xNDcJYzAuMTc1LTEuMjc2LTAuMDE2LTIuMDg2LTAuMTg0LTIuODAxbC0wLjAyNy0wLjExNmMtMC4xNzgtMC43NjEtMC4zODgtMS4yOTctMC4zOTctMS4zMTlsLTAuMTExLTAuMjgybC0wLjMwMy0wLjAzMgljMCwwLTAuMTc4LTAuMDE5LTAuNDQ5LTAuMDE5Yy0wLjM4MSwwLTAuOTQ0LDAuMDM3LTEuNDY2LDAuMjE1bC0wLjE5NiwwLjA2NmMtMC43MTQsMC4yNDEtMS4zODksMC40NjgtMi4zMjEsMS4wMjQJYy0wLjMzMiwwLjE5OC0wLjcwMiwwLjQzMS0xLjEwMSwwLjY5NEMyNy40MDQsMTMuMzk0LDI1Ljc0NSwxMy4xOSwyNCwxMy4xOWMtMS43NjIsMC0zLjQzNSwwLjIwNS00Ljk3OSwwLjYxCWMtMC40MDMtMC4yNjUtMC43NzUtMC40OTktMS4xMDktMC42OTljLTAuOTMyLTAuNTU2LTEuNjA3LTAuNzg0LTIuMzIxLTEuMDI0bC0wLjE5Ni0wLjA2NmMtMC41MjEtMC4xNzctMS4wODUtMC4yMTUtMS40NjYtMC4yMTUJYy0wLjI3MSwwLTAuNDQ5LDAuMDE5LTAuNDQ5LDAuMDE5bC0wLjMwMiwwLjAzMmwtMC4xMTMsMC4yODNjLTAuMDA5LDAuMDIyLTAuMjE5LDAuNTU4LTAuMzk3LDEuMzE5bC0wLjAyNywwLjExNgljLTAuMTY5LDAuNzE1LTAuMzYsMS41MjQtMC4xODQsMi44YzAuMDU2LDAuNDA3LDAuMTU2LDAuODAxLDAuMjk4LDEuMTc0Yy0xLjMyNywxLjYyLTEuOTk5LDMuNTY3LTEuOTk5LDUuNzk1CWMwLDUuNzAzLDIuNzY2LDguODM4LDguNjg2LDkuODA2Yy0wLjM5NSwwLjU5LTAuNjcxLDEuMjU1LTAuODEzLDEuOTY0Yy0wLjMzLDAuMTMtMC42MjksMC4yMTYtMC44OTEsMC4yNTYJYy0wLjI2MywwLjA0LTAuNTM3LDAuMDYtMC44MTQsMC4wNmMtMC42OSwwLTEuMzUzLTAuMTI5LTEuNjktMC4zMjljLTAuNDQtMC4yNjEtMS4wNTctMC45MTQtMS41NzItMS42NjUJYy0wLjM1LTAuNTEtMS4wNDctMS40MTctMS43ODgtMS43NTVjLTAuNjM1LTAuMjktMS4yOTgtMC40NTctMS44MjEtMC40NTdjLTAuMTEsMC0wLjIxLDAuMDA4LTAuMjk4LDAuMDIyCWMtMC4zNjYsMC4wNTgtMC42NjgsMC4yNTItMC44MjgsMC41MzRjLTAuMTI4LDAuMjI0LTAuMTQ5LDAuNDgzLTAuMDU5LDAuNzA4YzAuMTc5LDAuNDQ4LDAuODQyLDAuODUsMS4xMTksMS4wMDIJYzAuMzM1LDAuMTg0LDAuOTE5LDAuNzQ0LDEuMjU0LDEuMjg0YzAuMjUxLDAuNDA0LDAuMzcsMC42OTcsMC41MjEsMS4wNjdjMC4wODUsMC4yMDksMC4xNzgsMC40MzcsMC4zMDQsMC43MTIJYzAuMzMxLDAuNzE5LDEuMzUzLDEuNDcyLDEuOTA1LDEuODAzYzAuNzU0LDAuNDUyLDIuMTU0LDAuNTc4LDIuOTIyLDAuNjEybDAuMTExLDAuMDAyYzAuMjk5LDAsMC44LTAuMDQ1LDEuNDk1LTAuMTM1djMuMTc3CWMwLDAuNzc5LTAuOTkxLDAuODEtMS4yMzQsMC44MWMtMC4wMzEsMCwwLjUwMywwLjE4NCwwLjUwMywwLjE4NEMxOS43MzEsNDMuNjQsMjEuODIyLDQ0LDI0LDQ0YzIuMTc4LDAsNC4yNjktMC4zNiw2LjIzMS0xLjAwMwlDMzAuMjMxLDQyLjk5NywzMC44MTIsNDIuNzkzLDMwLjc4MSw0Mi43OTd6IiBvcGFjaXR5PSIuMDciPjwvcGF0aD48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMzYuNzQ0LDIzLjMzNGMwLTIuMzEtMC43ODItNC4yMjYtMi4xMTctNS43MjhjMC4xNDUtMC4zMjUsMC4yOTYtMC43NjEsMC4zNzEtMS4zMDkJYzAuMTcyLTEuMjUtMC4wMzEtMi0wLjIwMy0yLjczNHMtMC4zNzUtMS4yNS0wLjM3NS0xLjI1cy0wLjkyMi0wLjA5NC0xLjcwMywwLjE3MnMtMS40NTMsMC40NjktMi40MjIsMS4wNDcJYy0wLjQ1MywwLjI3LTAuOTA5LDAuNTY2LTEuMjcsMC44MDZDMjcuNDgyLDEzLjkxLDI1Ljc4NSwxMy42OSwyNCwxMy42OWMtMS44MDEsMC0zLjUxMywwLjIyMS01LjA2NywwLjY1MgljLTAuMzYyLTAuMjQxLTAuODIxLTAuNTM5LTEuMjc3LTAuODExYy0wLjk2OS0wLjU3OC0xLjY0MS0wLjc4MS0yLjQyMi0xLjA0N3MtMS43MDMtMC4xNzItMS43MDMtMC4xNzJzLTAuMjAzLDAuNTE2LTAuMzc1LDEuMjUJcy0wLjM3NSwxLjQ4NC0wLjIwMywyLjczNGMwLjA3NywwLjU2MiwwLjIzMywxLjAwNiwwLjM4MiwxLjMzM2MtMS4zMSwxLjQ5My0yLjA3OCwzLjM5Ny0yLjA3OCw1LjcwNAljMCw1Ljk4MywzLjIzMiw4LjcxNCw5LjEyMSw5LjQzNWMtMC42ODcsMC43MjYtMS4xNDgsMS42NTYtMS4zMDMsMi42OTFjLTAuMzg3LDAuMTctMC44MzMsMC4zMy0xLjI2MiwwLjM5NAljLTEuMTA0LDAuMTY3LTIuMjcxLDAtMi44MzMtMC4zMzNzLTEuMjI5LTEuMDgzLTEuNzI5LTEuODEzYy0wLjQyMi0wLjYxNi0xLjAzMS0xLjMzMS0xLjU4My0xLjU4MwljLTAuNzI5LTAuMzMzLTEuNDM4LTAuNDU4LTEuODMzLTAuMzk2Yy0wLjM5NiwwLjA2My0wLjU4MywwLjM1NC0wLjUsMC41NjNjMC4wODMsMC4yMDgsMC40NzksMC41MjEsMC44OTYsMC43NQljMC40MTcsMC4yMjksMS4wNjMsMC44NTQsMS40MzgsMS40NThjMC40MTgsMC42NzQsMC41LDEuMDYzLDAuODU0LDEuODMzYzAuMjQ5LDAuNTQyLDEuMTAxLDEuMjE5LDEuNzA4LDEuNTgzCWMwLjUyMSwwLjMxMywxLjU2MiwwLjQ5MSwyLjY4OCwwLjU0MmMwLjM4OSwwLjAxOCwxLjMwOC0wLjA5NiwyLjA4My0wLjIwNnYzLjc1YzAsMC42MzktMC41ODUsMS4xMjUtMS4xOTEsMS4wMTMJQzE5Ljc1Niw0My42NjgsMjEuODMzLDQ0LDI0LDQ0YzIuMTY2LDAsNC4yNDMtMC4zMzIsNi4xOS0wLjk4NEMyOS41ODUsNDMuMTI3LDI5LDQyLjY0MSwyOSw0Mi4wMDJ2LTUuODA0CWMwLTEuMzI5LTAuNTI3LTIuNTMtMS4zNzMtMy40MjVDMzMuNDczLDMyLjA3MSwzNi43NDQsMjkuNDA1LDM2Ljc0NCwyMy4zMzR6IE0xMS4yMzksMzIuNzI3Yy0wLjE1NC0wLjA3OS0wLjIzNy0wLjIyNS0wLjE4NS0wLjMyOAljMC4wNTItMC4xMDMsMC4yMi0wLjEyMiwwLjM3NC0wLjA0M2MwLjE1NCwwLjA3OSwwLjIzNywwLjIyNSwwLjE4NSwwLjMyOFMxMS4zOTMsMzIuODA2LDExLjIzOSwzMi43Mjd6IE0xMi40NTEsMzMuNDgyCWMtMC4wODEsMC4wODgtMC4yNTUsMC4wNi0wLjM4OS0wLjA2MnMtMC4xNzctMC4yOTMtMC4wOTYtMC4zODFjMC4wODEtMC4wODgsMC4yNTUtMC4wNiwwLjM4OSwwLjA2MlMxMi41MzIsMzMuMzk0LDEyLjQ1MSwzMy40ODJ6IE0xMy4yMDUsMzQuNzMyYy0wLjEwMiwwLjA3Mi0wLjI3NSwwLjAwNS0wLjM4Ni0wLjE1cy0wLjExOC0wLjM0LTAuMDE2LTAuNDEyczAuMjc1LTAuMDA1LDAuMzg2LDAuMTUJQzEzLjI5OSwzNC40NzUsMTMuMzA3LDM0LjY2LDEzLjIwNSwzNC43MzJ6IE0xNC4yODgsMzUuNjczYy0wLjA2OSwwLjExMi0wLjI2NSwwLjExNy0wLjQzNywwLjAxMnMtMC4yNTYtMC4yODEtMC4xODctMC4zOTMJYzAuMDY5LTAuMTEyLDAuMjY1LTAuMTE3LDAuNDM3LTAuMDEyUzE0LjM1NywzNS41NjEsMTQuMjg4LDM1LjY3M3ogTTE1LjMxMiwzNi41OTRjLTAuMjEzLTAuMDI2LTAuMzcxLTAuMTU5LTAuMzUzLTAuMjk3CWMwLjAxNy0wLjEzOCwwLjIwNC0wLjIyOCwwLjQxNi0wLjIwMmMwLjIxMywwLjAyNiwwLjM3MSwwLjE1OSwwLjM1MywwLjI5N0MxNS43MTEsMzYuNTI5LDE1LjUyNSwzNi42MiwxNS4zMTIsMzYuNTk0eiBNMTYuOTYzLDM2LjgzM2MtMC4yMjctMC4wMTMtMC40MDQtMC4xNDMtMC4zOTUtMC4yODljMC4wMDktMC4xNDYsMC4yLTAuMjU1LDAuNDI3LTAuMjQyYzAuMjI3LDAuMDEzLDAuNDA0LDAuMTQzLDAuMzk1LDAuMjg5CUMxNy4zODEsMzYuNzM4LDE3LjE5LDM2Ljg0NiwxNi45NjMsMzYuODMzeiBNMTguNTIxLDM2LjY3N2MtMC4yNDIsMC0wLjQzOC0wLjEyNi0wLjQzOC0wLjI4MXMwLjE5Ni0wLjI4MSwwLjQzOC0wLjI4MQljMC4yNDIsMCwwLjQzOCwwLjEyNiwwLjQzOCwwLjI4MVMxOC43NjIsMzYuNjc3LDE4LjUyMSwzNi42Nzd6Ij48L3BhdGg+Cjwvc3ZnPg=="
+              />
+            </Link>
+          </div>
+
+          <p className="mt-5 text-slate-600  font-semibold">
+            Mern Developer | React Developer | Node Developer | Express
+            Developer
+          </p>
+          <p className="mt-5 text-slate-600 font-semibold">
+            Step into my world where tech meets charm. I'm not just a software
+            whiz; I make digital magic happen. From sleek designs to smooth
+            operations, I build stuff that works and wows. Come check out what
+            I've conjured up, and let's make some tech dreams real together.
+          </p>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      </section>
+      <section id="about-section" className="w-full bg-black p-20 max-sm:p-5">
+        <About></About>
+      </section>
+      <section
+        id="work-section"
+        className="w-full p-20 bg-[#fafafa] max-sm:p-5"
+      >
+        <Experience></Experience>
+      </section>
+      <section id="project-section" className="w-full p-20 bg-white max-sm:p-5">
+        <Projects></Projects>
+      </section>
+      <footer className="w-full p-20 bg-black max-sm:p-5">
+        <Footer></Footer>
+      </footer>
+    </div>
   );
 }
