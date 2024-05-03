@@ -1,12 +1,19 @@
 import React from "react";
 import Clip from "./Clip";
 
+interface expCardProps {
+  companyDetails: String;
+  duration: String;
+  bulletPoints: String[];
+  techStack: String[];
+}
+
 export default function ExpCard({
   companyDetails,
   duration,
   bulletPoints,
   techStack,
-}) {
+}: expCardProps) {
   return (
     <div className="bg-gray-100 rounded-lg p-10 shadow-md">
       <div className="flex justify-between text-xl font-bold">
@@ -15,12 +22,16 @@ export default function ExpCard({
       </div>
       <ul className="mt-4 flex flex-col gap-2 font-light">
         {bulletPoints?.map((point: any) => {
-          return <li className="list-disc">{point}</li>;
+          return (
+            <li key={point} className="list-disc">
+              {point}
+            </li>
+          );
         })}
       </ul>
       <div className="mt-4 flex items-center gap-2 flex-wrap">
         {techStack?.map((stack: any) => {
-          return <Clip title={stack}></Clip>;
+          return <Clip key={stack} title={stack}></Clip>;
         })}
       </div>
     </div>

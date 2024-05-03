@@ -52,22 +52,24 @@ export default function ProjectCard({
         ) : (
           <>
             <div className="w-full h-full col-span-2 rounded-md">
-              <img
-                className="object-cover h-full w-full rounded-md"
+              <Image
                 src={imgUrl}
+                className="object-cover h-full w-full rounded-md"
                 alt={projectTitle}
-              />
+              ></Image>
             </div>
             <div className="col-span-1 max-sm:col-span-2">
-              {projectDescription?.map((desc, index) => (
-                <p key={index} className="mt-5 font-light">
-                  {desc}
-                </p>
-              ))}
+              {projectDescription?.map((desc, index) => {
+                return (
+                  <p key={index} className="mt-5 font-light">
+                    {desc}
+                  </p>
+                );
+              })}
               <div className="mt-5 flex items-center gap-2 flex-wrap">
-                {techStack?.map((tech, index) => (
-                  <Clip key={index} title={tech} />
-                ))}
+                {techStack?.map((tech, index) => {
+                  return <Clip key={index} title={tech} />;
+                })}
               </div>
               <a
                 href={projectUrl}
